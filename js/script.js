@@ -24,6 +24,32 @@ let playerParty = [];
 let enemyParty = [];
 addListeners();
 
+//load images
+const imagesToLoad = [
+    './assets/img/nemzback.png',
+	'./assets/img/black.png',
+	'./assets/img/pkmnvictorylegion.png',
+	'./assets/img/pkmnbattle1.png',
+	'./assets/img/pkmnbattle2.png',
+	'./assets/img/pkmnbattle3.png',
+	'./assets/img/nemzback.png',
+    './assets/img/cat.png',
+    './assets/img/dog.png',
+    './assets/img/squirrel.png',
+    './assets/img/bear.png',
+    './assets/img/lynx.png',
+    // ... add any other images here
+];
+
+function preloadImages() {
+    for(let i = 0; i < imagesToLoad.length; i++) {
+        const img = new Image();
+        img.src = imagesToLoad[i];
+    }
+}
+
+document.addEventListener('DOMContentLoaded', preloadImages);
+
 // Helper functions
 const getElement = id => document.getElementById(id);
 const setElementStyle = (id, prop, value) => getElement(id).style[prop] = value;
