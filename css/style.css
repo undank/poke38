@@ -336,28 +336,66 @@ footer {
 		text-align: right;
 		font-size: 16px;
 	}
+	
+.postEndButton {
+    display: inline-block;
+    left: 270px;
+	top: 432px;
+	width: 100px;
+    height: 50px;
+    margin: 5% 10%; /* Adjust margins for better spacing */
+    background-color: #FFF;
+    border: 1px solid #000;
+    font-family: 'pokemon-font', monospace;
+    cursor: pointer;
+    visibility: hidden; 
+    position: absolute; /* Set position to absolute to precisely position them */
+}
 
-#startButton, #muteButton, #snakeButton, #gridButton, #soundButton, #recipeButton {
-		position: absolute;
-		padding: 20px;
-		font-size: 24px;
-		visibility: visible;
-	}
-#recipeButton {
-		top: 330px;
-		right: 10px;
-		background-color: yellow;
-		visibility: visible;
-	}
-#dialog {
-		display: none; 
-		position: fixed; 
-		top: 50%; 
-		left: 50%; 
-		transform: translate(-50%, -50%); 
-		z-index: 999; 
-		background: yellow; 
-		padding: 20px; 
-		border: 1px solid black;
-		font-family: Arial;
-	}
+#btn1, #btn2, #btn3, #btn4, #btn5, #btn6 {
+    position: absolute;
+    width: 100px;
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    font-size: 36px;
+    text-align: center;
+    line-height: 58px;  /* tweak this value */
+    cursor: pointer;
+    padding: 0;         /* reset padding */
+    margin: 0;          /* reset margin */
+    vertical-align: middle; /* align vertically if there are other inline elements */
+}
+
+#btn1 {
+    top: 60px;
+    left: 100px;
+}
+#btn2 {
+    top: 60px;
+    left: 300px;
+}
+#btn3 {
+    top: 150px;
+    left: 100px;
+}
+#btn4 {
+    top: 150px;
+    left: 300px;
+}
+#btn5 {
+    top: 240px;
+    left: 100px;
+}
+#btn6 {
+    top: 240px;
+    left: 300px;
+}
+
+.button-active {
+    background-color: rgba(255, 255, 255, 0.5) !important; /* change color to indicate active status */
+}
+
+.postEndButton:hover {
+    background-color: #EEE;
+}
