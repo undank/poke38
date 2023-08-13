@@ -26,19 +26,18 @@ addListeners();
 
 //load images
 const imagesToLoad = [
-    './assets/img/nemzback.png',
+	'./assets/img/nemzback.png',
 	'./assets/img/black.png',
 	'./assets/img/pkmnvictorylegion.png',
 	'./assets/img/pkmnbattle1.png',
 	'./assets/img/pkmnbattle2.png',
 	'./assets/img/pkmnbattle3.png',
 	'./assets/img/nemzback.png',
-    './assets/img/cat.png',
-    './assets/img/dog.png',
-    './assets/img/squirrel.png',
-    './assets/img/bear.png',
-    './assets/img/lynx.png',
-    // ... add any other images here
+	'./assets/img/cat.png',
+	'./assets/img/dog.png',
+	'./assets/img/squirrel.png',
+	'./assets/img/bear.png',
+	'./assets/img/lynx.png',
 ];
 
 function preloadImages() {
