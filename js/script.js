@@ -8,14 +8,14 @@ const faintSFX = new Audio('./assets/sfx/faint2.wav');
 const clickSFX = new Audio('./assets/sfx/click.wav');
 const bodySlamSFX = new Audio('./assets/sfx/bodyslam.mp3');
 const chokeSFX = new Audio('./assets/sfx/choke.mp3');
-const fatLaughSFX = new Audio('./assets/sfx/fatLaugh.mp3');
+const fatLaughSFX = new Audio('./assets/sfx/fatlaugh.mp3');
 const scratchSFX = new Audio('./assets/sfx/scratch.wav');
-const slashSFX = new Audio('./assets/sfx/slash.wav');
+const slashSFX = new Audio('./assets/sfx/Slash.wav');
 const cuddleSFX = new Audio('./assets/sfx/cuddle.wav');
 const megapunchSFX = new Audio('./assets/sfx/megapunch.wav');
 const biteSFX = new Audio('./assets/sfx/bite.wav');
 const barkSFX = new Audio('./assets/sfx/faint.wav');
-const purrSFX = new Audio('./assets/sfx/sing.wav');
+const purrSFX = new Audio('./assets/sfx/Sing.wav');
 const lickSFX = new Audio('./assets/sfx/lick.wav');
 
 // Variables
