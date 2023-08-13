@@ -1,7 +1,7 @@
 // Audio Initialization
 const titlesfx = new Audio('./assets/sfx/pokemonopening.mp3');
 const battlesfx = new Audio('./assets/sfx/pokemonbattle.mp3');
-const victorysfx = new Audio('./assets/sfx/pokemonvictory.mp3');
+const victorysfx = new Audio('./assets/sfx/pokemonvictoryshort.mp3');
 const losssfx = new Audio('./assets/sfx/pokemonloss.mp3');
 const eatSFX = new Audio('./assets/sfx/eat.ogg');
 const faintSFX = new Audio('./assets/sfx/faint2.wav');
@@ -18,6 +18,14 @@ const barkSFX = new Audio('./assets/sfx/faint.wav');
 const purrSFX = new Audio('./assets/sfx/Sing.wav');
 const lickSFX = new Audio('./assets/sfx/lick.wav');
 
+//buttons sounds post game
+const fight1SFX = new Audio('./assets/sfx/fight6.mp3');
+const fight2SFX = new Audio('./assets/sfx/fight5.mp3');
+const fight3SFX = new Audio('./assets/sfx/fight1.mp3');
+const fight4SFX = new Audio('./assets/sfx/fight2.mp3');
+const fight5SFX = new Audio('./assets/sfx/fight3.mp3');
+const fight6SFX = new Audio('./assets/sfx/fight4.mp3');
+
 // Variables
 let [playerPokemon, enemyPokemon] = [null, null];
 let playerParty = [];
@@ -26,18 +34,19 @@ addListeners();
 
 //load images
 const imagesToLoad = [
-	'./assets/img/nemzback.png',
+    './assets/img/nemzback.png',
 	'./assets/img/black.png',
 	'./assets/img/pkmnvictorylegion.png',
 	'./assets/img/pkmnbattle1.png',
 	'./assets/img/pkmnbattle2.png',
 	'./assets/img/pkmnbattle3.png',
 	'./assets/img/nemzback.png',
-	'./assets/img/cat.png',
-	'./assets/img/dog.png',
-	'./assets/img/squirrel.png',
-	'./assets/img/bear.png',
-	'./assets/img/lynx.png',
+    './assets/img/cat.png',
+    './assets/img/dog.png',
+    './assets/img/squirrel.png',
+    './assets/img/bear.png',
+    './assets/img/lynx.png',
+    // ... add any other images here
 ];
 
 function preloadImages() {
@@ -193,11 +202,11 @@ class Pokemon {
 
 pokemon = [];
 pokemon.push(new Pokemon('NEMZ', 50, 211, [moves['body slam'], moves['choke out'], moves['fat laugh']], './assets/img/blastoise.png', './assets/img/nemzback.png'));
-pokemon.push(new Pokemon('CAT', 12, 75, [moves['cuddle'], moves['purr']], './assets/img/cat.png', './assets/img/kadabraback.png'));
-pokemon.push(new Pokemon('DOG', 15, 80, [moves['bite'], moves['bark']], './assets/img/dog.png', './assets/img/kadabraback.png'));
+//pokemon.push(new Pokemon('CAT', 12, 75, [moves['cuddle'], moves['purr']], './assets/img/cat.png', './assets/img/kadabraback.png'));
+//pokemon.push(new Pokemon('DOG', 15, 80, [moves['bite'], moves['bark']], './assets/img/dog.png', './assets/img/kadabraback.png'));
 pokemon.push(new Pokemon('SQUIRREL', 7, 30, [moves['tackle'], moves['scratch']], './assets/img/squirrel.png', './assets/img/charizardback.png'));
-pokemon.push(new Pokemon('BEAR', 30, 120, [moves['slash'], moves['mega punch']], './assets/img/bear.png', './assets/img/charizardback.png'));
-pokemon.push(new Pokemon('LYNX', 25, 100, [moves['scratch'], moves['lick']], './assets/img/lynx.png', './assets/img/lynx.png'));
+//pokemon.push(new Pokemon('BEAR', 30, 120, [moves['slash'], moves['mega punch']], './assets/img/bear.png', './assets/img/charizardback.png'));
+//pokemon.push(new Pokemon('LYNX', 25, 100, [moves['scratch'], moves['lick']], './assets/img/lynx.png', './assets/img/lynx.png'));
 
 function startButton() {
     setElementStyle('startbutton', 'zIndex', '-1');
@@ -207,13 +216,13 @@ function startButton() {
     setTimeout(() => {
         titlesfx.pause();
         preTransitionMessage();
-    }, 10000); //change back to 10000
+    }, 1000); //change back to 10000
 }
 
 function preTransitionMessage() {
     clickSFX.play();
 	setElementSrc('ending', './assets/img/pkmnattack.png');
-    setElementText('endingtext', "NEMZ had just left SUBWAY, when...!");
+    setElementText('endingtext', "NEMZ had just got a SUBWAY, when...!");
     setElementStyle('ending', 'zIndex', '1');
     setElementStyle('endingtext', 'zIndex', '1');
 	setElementStyle('opening', 'zIndex', '-1');
@@ -494,6 +503,13 @@ function addListeners() {
 	document.getElementById('items').addEventListener('click', itemButton);
     document.getElementById('itemcancel').addEventListener('click', cancelButton);
 	document.getElementById('item1').addEventListener('click', potion);
+	/* document.getElementById('btn1').addEventListener('click', function() { fight1SFX.play(); });
+	document.getElementById('btn2').addEventListener('click', function() { fight2SFX.play(); });
+	document.getElementById('btn3').addEventListener('click', function() { fight3SFX.play(); });
+	document.getElementById('btn4').addEventListener('click', function() { fight4SFX.play(); });
+	document.getElementById('btn5').addEventListener('click', function() { fight5SFX.play(); });
+	document.getElementById('btn6').addEventListener('click', function() { fight6SFX.play(); }); */
+
 }
 
 function removeListeners() {
@@ -537,6 +553,8 @@ function endGame(winner) {
 
 function postEndMessage() {
 	['pkmn', 'pkmnback', 'pkmn-name', 'pkmnback-name', 'pkmn-level', 'pkmnback-level', 'pkmnback-hp', 'pkmnback-maxhp', 'player-hp', 'player-hp-bar', 'enemy-hp', 'enemy-hp-bar', 'b1', 'b2'].forEach(id => setElementStyle(id, 'visibility', 'hidden'));
+	['btn1', 'btn2', 'btn3', 'btn4', 'btn5', 'btn6'].forEach(id => setElementStyle(id, 'zIndex', '2'));
+	['btn1', 'btn2', 'btn3', 'btn4', 'btn5', 'btn6'].forEach(id => setElementStyle(id, 'visibility', 'visible'));
 	setElementSrc('ending', './assets/img/pkmnattack.png');
     setElementText('endingtext', "Thanks for playing!");
     setElementStyle('ending', 'zIndex', '1');
@@ -551,3 +569,30 @@ function postEndMessageLoss() {
     setElementStyle('endingtext', 'zIndex', '1');
 	setElementStyle('opening', 'zIndex', '-1');
 }
+
+function playAudio(buttonElement, audioElement) {
+    // Disable all buttons
+    const buttons = document.querySelectorAll("#btn1, #btn2, #btn3, #btn4, #btn5, #btn6");
+    buttons.forEach(btn => btn.disabled = true);
+
+    // Change appearance of the clicked button
+    buttonElement.classList.add('button-active');
+
+    audioElement.play();
+
+    // Add event listener to handle when the audio ends
+    audioElement.addEventListener('ended', function() {
+        // Revert button appearance
+        buttonElement.classList.remove('button-active');
+
+        // Enable all buttons
+        buttons.forEach(btn => btn.disabled = false);
+    });
+}
+
+document.getElementById('btn1').addEventListener('click', function() { playAudio(this, fight1SFX); });
+document.getElementById('btn2').addEventListener('click', function() { playAudio(this, fight2SFX); });
+document.getElementById('btn3').addEventListener('click', function() { playAudio(this, fight3SFX); });
+document.getElementById('btn4').addEventListener('click', function() { playAudio(this, fight4SFX); });
+document.getElementById('btn5').addEventListener('click', function() { playAudio(this, fight5SFX); });
+document.getElementById('btn6').addEventListener('click', function() { playAudio(this, fight6SFX); });
