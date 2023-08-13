@@ -1,0 +1,363 @@
+@font-face {
+	font-family: 'pokemon-font';
+	src: url(../assets/fonts/pokemon-font.woff2) format('woff2');
+}
+
+@keyframes blink {
+    0% {
+        opacity:1;
+    }
+    50% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+} 
+
+button:focus {
+	outline: none;
+}
+
+button {
+	font-family: 'pokemon-font', monospace;
+	position: absolute;
+	color: #282d00;
+	background: transparent;
+	border: none !important;
+}
+
+.click:hover::before {
+	position: absolute;
+	content: url(../assets/img/pkmncursor.png);
+	left: -22px;
+	top: 1px;
+}
+
+.hover:hover {
+	cursor: pointer;
+}
+
+#gameboy {
+	position: absolute;
+	left: 160px;
+	top: -4px;
+}
+
+#game-window {
+	position: absolute;
+	width: 537px;
+	height: 487px;
+	left: 691px;
+	top: 202px;
+}
+
+#battle {
+	position: absolute;
+	visibility: hidden;
+}
+
+#pkmn, #pkmnback, #pkmn-name, #pkmnback-name, #pkmn-level, #pkmnback-level, #pkmnback-hp, #pkmnback-maxhp, #player-hp, #player-hp-bar, #enemy-hp, #enemy-hp-bar, #b1, #b2 {
+	visibility: hidden;
+}
+
+#pkmn-name {
+	font-size: 30px;
+	left: 25px;
+	top: -8px;
+}
+
+#pkmnback-name {
+	font-size: 30px;
+	left: 261px;
+	top: 180px;
+}
+
+#pkmn-level {
+	font-size: 25px;
+	left: 130px;
+	top: 22px;
+}
+
+#pkmnback-level {
+	font-size: 25px;
+	left: 398px;
+	top: 210px;
+}
+
+#pkmnback-hp {
+	font-size: 25px;
+	left: 295px;
+	top: 263px;
+}
+
+#pkmnback-maxhp {
+	font-size: 25px;
+	left: 403px;
+	top: 263px;
+}
+
+#enemy-hp {
+	position: absolute;
+	padding-top: 7px;
+	top: 67px;
+	left: 107px;
+	border-radius: 1px;
+	width: 161px;
+	line-height: 7px;
+}
+
+#enemy-hp-bar {
+	position: absolute;
+	padding-top: 7px;
+	top: 0px;
+	border-radius: 1px;
+	width: 100%;
+	line-height: 7px;
+	background-color: #383e00;
+	transform-origin: left;
+	transform: scaleX(1);
+	transition: width 1s;
+}
+
+#player-hp {
+	position: absolute;
+	padding-top: 7px;
+	top: 255px;
+	left: 322px;
+	border-radius: 1px;
+	width: 161px;
+	line-height: 7px;	
+}
+
+#player-hp-bar {
+	position: absolute;
+	padding-top: 7px;
+	top: 0px;
+	border-radius: 1px;
+	width: 100%;
+	line-height: 7px;
+	background-color: #383e00;
+	transform-origin: left;
+	transform: scaleX(1);
+	transition: width 1s;
+}
+
+#pkmnback {
+	position: absolute;
+	left: 24px;
+	top: 142px;
+}
+
+#pkmn {
+	position: absolute;
+	left: 335px;
+	top: 3px;
+}
+
+#opening {
+	position: absolute;
+	top: 2px;
+}
+
+#startbutton {
+	font-size: 20px;
+    width: 215px;
+    top: 200px;
+    left: 160px;
+	z-index: 1;
+	visibility: visible;
+	animation-name: blink;
+	animation-duration: 0.5s;
+	animation-iteration-count: infinite;
+}
+
+#black, #ending {
+	position: absolute;
+}
+
+#endingtext {
+	font-size: 25px;
+	width: 500px;
+	top: 352px;
+	left: 25px;
+	text-align: left;
+	line-height: 50px;
+	z-index: -1;
+}
+
+#attackScreen {
+	position: absolute;
+}
+
+#attackText {
+	font-size: 25px;
+	width: 500px;
+	top: 352px;
+	left: 25px;
+	text-align: left;
+	line-height: 50px;
+	z-index: -1;
+}
+
+
+#b1 {
+	position: absolute;
+}
+
+#b2 {
+	position: absolute;
+	z-index: 1;
+}
+
+#fight {
+	position: absolute;
+	left: 268px;
+	top: 378px;
+	width: 131px;
+	height: 28px;
+	background: transparent;
+    border: none !important;
+    color: rgba(0,0,0,0);
+}
+
+#items {
+	position: absolute;
+	left: 270px;
+	top: 432px;
+	width: 102px;
+	height: 28px;
+	background: transparent;
+	border: none !important;
+	color: rgba(0,0,0,0);
+}
+
+#item1 {
+	font-size: 25px;
+	left: 158px;
+	top: 102px;  /* Adjust position as needed */
+	width: 350px;
+	height: 28px;
+	z-index: -1;
+	text-align: left;
+}
+
+#itemcancel {
+	font-size: 25px;
+	left: 158px;
+	top: 142px;  /* Adjust position as needed */
+	width: 77px;
+	height: 28px;
+	z-index: -1;
+}
+
+#pkmnbtn {
+	position: absolute;
+	left: 430px;
+	top: 378px;
+	width: 50px;
+	height: 28px;
+	background: transparent;
+	border: none !important;
+	color: rgba(0,0,0,0);
+}
+
+#run {
+	position: absolute;
+	left: 430px;
+	top: 432px;
+	width: 77px;
+	height: 28px;
+	background: transparent;
+	border: none !important;
+	color: rgba(0,0,0,0);
+}
+
+#attack1 {
+	font-size: 25px;
+	left: 158px;
+	top: 342px;
+	width: 350px;
+	height: 28px;
+	z-index: -1;
+	text-align: left;
+}
+
+#attack2 {
+	font-size: 25px;
+	left: 158px;
+	top: 372px;
+	width: 350px;
+	height: 28px;
+	z-index: -1;
+	text-align: left;
+}
+
+#attack3 {
+	font-size: 25px;
+	left: 158px;
+	top: 402px;
+	width: 350px;
+	height: 28px;
+	z-index: -1;
+	text-align: left;
+}
+
+#attackcancel {
+	font-size: 25px;
+	left: 158px;
+	top: 432px;
+	width: 77px;
+	height: 28px;
+	z-index: -1;
+}
+footer {
+		position: fixed;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		background-color: #f8f9fa;
+		color: lilac;
+		padding: 20px 0;
+		font-size: 32px;
+		font-family: Arial;
+		display: flex;
+		justify-content: center;
+	}
+#footerText {
+		text-align: center;
+		font-family: 'pokemon-font';
+	}
+#footerLinks {
+		margin: 0;
+		position: absolute;
+		right: 10px;
+		list-style-type: none;
+		text-align: right;
+		font-size: 16px;
+	}
+
+#startButton, #muteButton, #snakeButton, #gridButton, #soundButton, #recipeButton {
+		position: absolute;
+		padding: 20px;
+		font-size: 24px;
+		visibility: visible;
+	}
+#recipeButton {
+		top: 330px;
+		right: 10px;
+		background-color: yellow;
+		visibility: visible;
+	}
+#dialog {
+		display: none; 
+		position: fixed; 
+		top: 50%; 
+		left: 50%; 
+		transform: translate(-50%, -50%); 
+		z-index: 999; 
+		background: yellow; 
+		padding: 20px; 
+		border: 1px solid black;
+		font-family: Arial;
+	}
