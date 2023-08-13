@@ -344,7 +344,7 @@ var itemList = [];
 let items = {
 	'potion': {
 		name: 'SUBWAY',
-		damage: -200,
+		damage: -150,
 		target: 'self',
 		amount: 1
 	}
