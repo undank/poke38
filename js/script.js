@@ -21,8 +21,8 @@ const lickSFX = new Audio('./assets/sfx/lick.wav');
 //buttons sounds post game
 const fight1SFX = new Audio('./assets/sfx/fight1.mp3');
 const fight2SFX = new Audio('./assets/sfx/fight5.mp3');
-const fight3SFX = new Audio('./assets/sfx/fight3.mp3');
-const fight4SFX = new Audio('./assets/sfx/fight2.mp3');
+const fight3SFX = new Audio('./assets/sfx/fight2.mp3');
+const fight4SFX = new Audio('./assets/sfx/fight3.mp3');
 const fight5SFX = new Audio('./assets/sfx/fight3.mp3');
 const fight6SFX = new Audio('./assets/sfx/fight4.mp3');
 
