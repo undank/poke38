@@ -222,7 +222,7 @@ function startButton() {
 function preTransitionMessage() {
     clickSFX.play();
 	setElementSrc('ending', './assets/img/pkmnattack.png');
-    setElementText('endingtext', "NEMZ had just got a SUBWAY, when...!");
+    setElementText('endingtext', "NEMZ had just left SUBWAY, when...!");
     setElementStyle('ending', 'zIndex', '1');
     setElementStyle('endingtext', 'zIndex', '1');
 	setElementStyle('opening', 'zIndex', '-1');
