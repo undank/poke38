@@ -202,11 +202,11 @@ class Pokemon {
 
 pokemon = [];
 pokemon.push(new Pokemon('NEMZ', 50, 211, [moves['body slam'], moves['choke out'], moves['fat laugh']], './assets/img/blastoise.png', './assets/img/nemzback.png'));
-//pokemon.push(new Pokemon('CAT', 12, 75, [moves['cuddle'], moves['purr']], './assets/img/cat.png', './assets/img/kadabraback.png'));
-//pokemon.push(new Pokemon('DOG', 15, 80, [moves['bite'], moves['bark']], './assets/img/dog.png', './assets/img/kadabraback.png'));
+pokemon.push(new Pokemon('CAT', 12, 75, [moves['cuddle'], moves['purr']], './assets/img/cat.png', './assets/img/kadabraback.png'));
+pokemon.push(new Pokemon('DOG', 15, 80, [moves['bite'], moves['bark']], './assets/img/dog.png', './assets/img/kadabraback.png'));
 pokemon.push(new Pokemon('SQUIRREL', 7, 30, [moves['tackle'], moves['scratch']], './assets/img/squirrel.png', './assets/img/charizardback.png'));
-//pokemon.push(new Pokemon('BEAR', 30, 120, [moves['slash'], moves['mega punch']], './assets/img/bear.png', './assets/img/charizardback.png'));
-//pokemon.push(new Pokemon('LYNX', 25, 100, [moves['scratch'], moves['lick']], './assets/img/lynx.png', './assets/img/lynx.png'));
+pokemon.push(new Pokemon('BEAR', 30, 120, [moves['slash'], moves['mega punch']], './assets/img/bear.png', './assets/img/charizardback.png'));
+pokemon.push(new Pokemon('LYNX', 25, 100, [moves['scratch'], moves['lick']], './assets/img/lynx.png', './assets/img/lynx.png'));
 
 function startButton() {
     setElementStyle('startbutton', 'zIndex', '-1');
@@ -216,7 +216,7 @@ function startButton() {
     setTimeout(() => {
         titlesfx.pause();
         preTransitionMessage();
-    }, 1000); //change back to 10000
+    }, 10000); //change back to 10000
 }
 
 function preTransitionMessage() {
