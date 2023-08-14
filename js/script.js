@@ -274,18 +274,28 @@ function initGame() { //Starts the game and sets the beginning pokemon at random
 }
 
 function showPokemon() {
-    setElementSrc('pkmnback', playerPokemon.imgback);
-    setElementSrc('pkmn', enemyPokemon.imgfront);
+    let playerImage = new Image();
+    playerImage.src = playerPokemon.imgback;
+    playerImage.onload = function() {
+        setElementSrc('pkmnback', playerPokemon.imgback);
+        setElementStyle('pkmnback', 'visibility', 'visible');
+    }
+
+    let enemyImage = new Image();
+    enemyImage.src = enemyPokemon.imgfront;
+    enemyImage.onload = function() {
+        setElementSrc('pkmn', enemyPokemon.imgfront);
+        setElementStyle('pkmn', 'visibility', 'visible');
+    }
+
     setElementText('pkmnback-name', playerPokemon.pokename);
     setElementText('pkmn-name', enemyPokemon.pokename);
     setElementText('pkmnback-maxhp', playerPokemon.maxhealth);
     setElementText('pkmnback-hp', playerPokemon.health);
-	setElementText('pkmn-level', enemyPokemon.level);
+    setElementText('pkmn-level', enemyPokemon.level);
     setElementText('attack1', playerPokemon.moves[0].name);
     setElementText('attack2', playerPokemon.moves[1].name);
     setElementText('attack3', playerPokemon.moves[2].name);
-	setElementStyle('pkmnback', 'visibility', 'visible');
-    setElementStyle('pkmn', 'visibility', 'visible');
     updateHealthBars(playerPokemon, 'player');
     updateHealthBars(enemyPokemon, 'enemy');
 }
