@@ -399,3 +399,49 @@ footer {
 .postEndButton:hover {
     background-color: #EEE;
 }
+
+#recipeButton {
+		top: 330px;
+		right: 10px;
+		background-color: yellow;
+		position: absolute;
+		border-style: solid;
+		padding: 20px;
+		font-size: 24px;
+		border: 2px solid black !important;
+	}
+	
+#creditsButton {
+		top: 420px;
+		right: 10px;
+		background-color: lightgray;
+		position: absolute;
+		border-style: solid;
+		padding: 20px;
+		font-size: 24px;
+		border: 2px solid black !important;
+	}
+	
+#closeDialog, #closeDialog2 {
+	font-size: 18px;
+	border: 2px solid black !important;
+	padding: 5px;
+}
+	
+#dialog, #dialog2 {
+	display: none; 
+	position: fixed; 
+	top: 50%; 
+	left: 50%; 
+	transform: translate(-50%, -50%); 
+	z-index: 999; 
+	background: yellow; 
+	padding: 20px; 
+	border: 1px solid black;
+	font-family: Arial;
+}
+
+#dialog2 {
+	font-size: 18px;
+	background: lightgray;
+}
