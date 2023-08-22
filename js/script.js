@@ -36,6 +36,7 @@ addListeners();
 const imagesToLoad = [
     './assets/img/nemzback.png',
 	'./assets/img/black.png',
+	'./assets/img/transition.gif',
 	'./assets/img/pkmnvictorylegion.png',
 	'./assets/img/pkmnbattle1.png',
 	'./assets/img/pkmnbattle2.png',
@@ -234,7 +235,7 @@ function preTransitionMessage() {
 function transition() {
     setElementStyle('ending', 'zIndex', '-1');
 	setElementStyle('endingtext', 'zIndex', '-1');
-	setElementSrc('black', './assets/img/black.png');
+	setElementSrc('black', './assets/img/transition.gif');
     setElementStyle('black', 'zIndex', '1');
     setElementStyle('opening', 'zIndex', '-1');
     setTimeout(() => battlesfx.play(), 100);
