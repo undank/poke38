@@ -354,7 +354,7 @@ footer {
 
 #btn1, #btn2, #btn3, #btn4, #btn5, #btn6 {
     position: absolute;
-    width: 100px;
+    width: 200px;
     height: 60px;
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 5px;
@@ -369,7 +369,7 @@ footer {
 
 #btn1 {
     top: 60px;
-    left: 100px;
+    left: 40px;
 }
 #btn2 {
     top: 60px;
@@ -377,7 +377,7 @@ footer {
 }
 #btn3 {
     top: 150px;
-    left: 100px;
+    left: 40px;
 }
 #btn4 {
     top: 150px;
@@ -385,7 +385,7 @@ footer {
 }
 #btn5 {
     top: 240px;
-    left: 100px;
+    left: 40px;
 }
 #btn6 {
     top: 240px;
@@ -437,8 +437,8 @@ footer {
 	z-index: 999; 
 	background: yellow; 
 	padding: 20px; 
-	border: 1px solid black;
 	font-size: 24px;
+	border: 1px solid black;
 	font-family: Arial;
 }
 
