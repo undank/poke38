@@ -272,7 +272,6 @@ function initGame() { //Starts the game and sets the beginning pokemon at random
     playerPokemon = playerParty[0];
     enemyPokemon = enemyParty[0];
     showPokemon();
-    //postEndMessage()
 }
 
 function showPokemon() {
@@ -608,3 +607,15 @@ document.getElementById('btn3').addEventListener('click', function() { playAudio
 document.getElementById('btn4').addEventListener('click', function() { playAudio(this, fight4SFX); });
 document.getElementById('btn5').addEventListener('click', function() { playAudio(this, fight5SFX); });
 document.getElementById('btn6').addEventListener('click', function() { playAudio(this, fight6SFX); });
+document.getElementById('recipeButton').addEventListener('click', function() {
+    document.getElementById('dialog').style.display = 'block';
+});
+document.getElementById('creditsButton').addEventListener('click', function() {
+    document.getElementById('dialog2').style.display = 'block';
+});
+document.getElementById('closeDialog').addEventListener('click', function() {
+    document.getElementById('dialog').style.display = 'none';
+});
+document.getElementById('closeDialog2').addEventListener('click', function() {
+	document.getElementById('dialog2').style.display = 'none';
+});
