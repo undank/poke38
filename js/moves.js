@@ -6,12 +6,12 @@ let moves = {
 	},
 	'choke out': {
 		name: 'CHOKE OUT',
-		damage: 36,
+		damage: 37,
 		target: 'enemy'
 	},
 	'fat laugh': {
 		name: 'FAT LAUGH',
-		damage: 34,
+		damage: 37,
 		target: 'enemy'
 	},
 	'slash': {
