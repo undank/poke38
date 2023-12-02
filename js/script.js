@@ -548,7 +548,7 @@ function endGame(winner) {
 			document.getElementById('endingtext').textContent = "Impossible! LEGION was defeated!";
 			setTimeout(function() {
 				postEndMessage();
-			}, 6000);
+			}, 5000);
         }, 5000);
         document.getElementById('ending').src = './assets/img/pkmnvictorylegion.png';
     } else if (winner === 'enemy') {
