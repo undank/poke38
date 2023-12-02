@@ -204,8 +204,9 @@ class Pokemon {
 pokemon = [];
 pokemon.push(new Pokemon('NEMZ', 50, 144, [moves['body slam'], moves['choke out'], moves['fat laugh']], './assets/img/blastoise.png', './assets/img/nemzback.png'));
 pokemon.push(new Pokemon('CAT', 12, 80, [moves['cuddle'], moves['purr']], './assets/img/cat.png', './assets/img/kadabraback.png'));
-pokemon.push(new Pokemon('DOG', 15, 85, [moves['bite'], moves['bark']], './assets/img/dog.png', './assets/img/kadabraback.png'));
-pokemon.push(new Pokemon('SQUIRREL', 7, 40, [moves['tackle'], moves['scratch']], './assets/img/squirrel.png', './assets/img/charizardback.png'));
+pokemon.push(new Pokemon('DOG', 15, 85, [moves['jaw breaker'], moves['bark']], './assets/img/dog.png', './assets/img/kadabraback.png'));
+pokemon.push(new Pokemon('WOMAN', 7, 35, [moves['tackle'], moves['scratch']], './assets/img/girl176.png', './assets/img/charizardback.png'));
+//pokemon.push(new Pokemon('SQUIRREL', 7, 40, [moves['tackle'], moves['scratch']], './assets/img/squirrel.png', './assets/img/charizardback.png'));
 //pokemon.push(new Pokemon('BEAR', 30, 120, [moves['slash'], moves['mega punch']], './assets/img/bear.png', './assets/img/charizardback.png'));
 pokemon.push(new Pokemon('LYNX', 25, 100, [moves['scratch'], moves['lick']], './assets/img/lynx.png', './assets/img/lynx.png'));
 

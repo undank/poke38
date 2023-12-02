@@ -44,6 +44,11 @@ let moves = {
         damage: 30,
         target: 'enemy'
     },
+    'jaw breaker': {
+        name: 'JAW BREAKER',
+        damage: 30,
+        target: 'enemy'
+    },
 	'lick': {
 		name: 'LICK',
 		damage: 35,
