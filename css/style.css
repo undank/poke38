@@ -1,6 +1,7 @@
 @font-face {
 	font-family: 'pokemon-font';
 	src: url(../assets/fonts/pokemon-font.woff2) format('woff2');
+	color: #000000 !important;
 }
 
 @keyframes blink {
